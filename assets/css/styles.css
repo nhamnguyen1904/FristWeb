@@ -1,0 +1,137 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng( kiểu chữ, hình tròn, vuông, ...)
+ */
+
+#main{
+
+}
+
+#header{
+    height: 46px;
+    background-color: lightskyblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#nav{
+    display: inline-block;
+}
+
+/* Chỉ cho <li> ở cấp 1 */
+#nav > li{
+    /* Hiển thị: inline-block: nằm trên cùng 1 đường thẳng */
+    display: inline-block; 
+    
+}
+
+#nav, .subnav{
+    list-style-type: none;
+}
+
+#nav li{
+    position: relative;
+}
+
+/* Css riêng cho thẻ <li> cha để ko ảnh hưởng đến con */
+#nav >li>a{
+    color: #fff;
+}
+
+/* nav -> li -> a: theo thứ tự từ lớn tới nhỏ */
+#nav li a{
+    /* Bỏ gạch chân */
+    text-decoration: none;
+    line-height: 46px;
+    /* padding để tạo khoảng cách giữa các chữ */
+    padding: 0 24px;
+    display: block;
+}
+
+/* Di vào thẻ <li> cha hiện thẻ <ul> có class là subnav */
+#nav li:hover .subnav{
+    display: block;
+}
+
+/* Di chuột ảnh hưởng đến cấp 1 (>) */
+#nav> li:hover> a{
+    color: #000;
+    background-color: lightblue;
+}
+
+/* Truy vào thẻ con của nav là class subnav */
+#nav .subnav{
+    display: none; /* Ẩn subnav, ban đầu cho hiển thị để css cho thành phần bên trong, sau khi css xong thì none display */
+    /* Đặt lại vị trí lấy vị trí của thẻ <li> lm gốc tọa độ */
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Css cho con của <li> có class subnav */
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+/* css cho icon (có or ko) */
+#nav.nav-arrow-down{
+    font-size: 12px;
+}
+
+/* Css cho thẻ con ảnh hưởng đến cấp 2 */
+#nav .subnav li:hover{
+    color: #000;
+    background-color: lightblue;
+}
+
+/* Search button: Con của header */
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+    /* cursor: thay đổi con chuột thành hình dạng khác */
+    cursor: pointer;
+}
+
+#header .search-btn:hover{
+    background-color: blueviolet;
+}
+
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider{
+    min-height: 500px;
+    background-color: gray;
+    /* Vì header nổi lên trên nên slider nằm dưới chiếm header-> đẩy slider xuống dưới header */
+    margin-top: 46px;
+}
+
+#content{
+    height: 1000px;
+
+}
+
+#footer{
+
+}
