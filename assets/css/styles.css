@@ -27,6 +27,7 @@ html{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 #nav{
@@ -121,10 +122,26 @@ html{
 }
 
 #slider{
-    min-height: 500px;
-    background-color: gray;
+    /* thêm position vào để phần content nổi lên trên ảnh và ko chiếm chỗ phần padding */
+    position: relative;
     /* Vì header nổi lên trên nên slider nằm dưới chiếm header-> đẩy slider xuống dưới header */
     margin-top: 46px;
+    /* 50% chiều ngang của chính nó, tỉ lệ theo kích thước chiều ngang */
+    padding-top: 50%;
+    background: url(/assets/img/slider/SM.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 50px;
+    /* căn giữa */
+    left: 45%;
+    text-align: center;
+    top: 70%;
+}
+
+#slider .text-heading{
+    
 }
 
 #content{
