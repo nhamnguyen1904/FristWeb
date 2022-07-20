@@ -141,8 +141,70 @@ html{
 }
 
 #content{
-    height: 1000px;
+    
 
+}
+
+#content .content-section{
+    width: 800px;
+    /* căn giữa */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+/* căn giữa heading text-align */
+#content .section-subheading{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    /* chữ nghiêng */
+    font-style: italic;
+    /* độ mờ đi của chữ (0-1) */
+    opacity: 0.6;
+}
+
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    /* đẩy xa khoảng cách các chữ */
+    letter-spacing: 4px;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    /* Căn đều 2 bên của text, giống như căn đều của word */
+    text-align: justify;
+    /* khoảng cách giữa các dòng của đoạn văn line spacing */
+    line-height: 1.5;
+}
+
+#content .band-list{
+    margin-top: 48px;
+    /* float sẽ khiến box co lại, sử dụng overflow thì nó sẽ căng ra và đẩy TOUR DATES xuống dưới */
+    overflow: hidden;   
+}
+
+/* css cho ảnh */
+#content .band-item{
+    /* Đẩy cho ảnh ngang hàng */
+    float: left;
+    width: calc(100%/3);
+    /* thay vì name center thì cho nguyên cái item căn giữa */
+    text-align: center;
+}
+
+#content .band-name{
+    font-size: 15px;
+}
+
+#content .band-img{
+    margin-top: 15px;
+    width: 154px;
+    /* bo góc ảnh */
+    border-radius: 5px;
 }
 
 #footer{
