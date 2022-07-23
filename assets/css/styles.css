@@ -14,6 +14,11 @@ html{
     color: #fff;
 }
 
+/* clear float */
+.clear{
+    clear: both;
+}
+
 /* 
 1. Vị trí
 2. Kích thước
@@ -248,6 +253,166 @@ html{
     text-align: center;
     line-height: 24px;
     margin-top: -3px;
+}
+
+/* Places Tour */
+.places-list{
+    margin: 32px -8px 16px;
+    padding-bottom: 32px;
+}
+
+.places-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 0 8px;
+}
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.5;
+}
+
+.place-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.place-buy-btn{
+    color: #fff;
+    background-color: #000;
+    /* bỏ gạch chân */
+    text-decoration: none;
+    padding: 11px 16px;
+    /* margin-bottom: 15px; */
+    display: inline-block;
+}
+
+.place-buy-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Buy tickets */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    /* modal container Nằm giữa chiều ngang của cha */
+    justify-content: center;
+}
+
+.modal .open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    /* Khi co trình duyệt thì cái buy ticket ko bị dính vào viền */
+    max-width: calc(100% -32px);
+    min-height: 200px;
+    position: relative;
+}
+
+.modal-header{
+    background-color: #009688;
+    height: 130px;
+    /* căn giữa cả icon và text */
+    display: flex;
+    /* căn giữa chiều cao */
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-heading-icon{
+    margin-right: 16px;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-close:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets{
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 18px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    background-color: #ccc;
+    color: #000;
+    /* or opacity : 0.9 */
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color: dodgerblue;
 }
 
 #footer{
